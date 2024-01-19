@@ -1,0 +1,297 @@
+CREATE TABLE evidence (
+    ID INT PRIMARY KEY,
+    OwnerName VARCHAR(255),
+    item VARCHAR(255),
+    details VARCHAR(255)
+);
+
+INSERT INTO evidence (ID, OwnerName, item, details) VALUES
+(1, 'Aman', 'broken iPad', 'Evidence found on ground floor.'),
+(2, 'Neha Gupta', 'Jewelry, Passport', 'Items found under the bed.'),
+(3, 'Amit Patel', 'Backpack, Documents', 'Items discovered in the closet.'),
+(4, 'Aman', 'misplaced set of keys', 'Evidence discovered on the fifth floor.'),
+(5, 'Sandeep Sharma', 'Glasses, Shoes', 'Shoes found near the window.'),
+(6, 'Aman', 'torn page from a diary', 'Evidence found on the sixth floor.'),
+(7, 'Ayesha Khan', 'Camera, Keys', 'Keys left on the kitchen counter.'),
+(8, 'Rajesh Malhotra', 'Tablet, Briefcase', 'Briefcase left in the hallway.'),
+(9, 'Anjali Reddy', 'Necklace, Handbag', 'Handbag found in the bedroom.'),
+(10, 'Alok Tiwari', 'Guitar, Music Sheets', 'Guitar left in the garage.'),
+(11, 'Shweta Das', 'Watches, Scarf', 'Watches found on the table.'),
+(12, 'Raj Kapoor', 'Paintings, Easel', 'Easel with paintings in the studio.'),
+(13, 'unknown', 'watch', 'watch lying in the floor indicating 5 am'),
+(14, 'Aman', 'torn piece of fabric', 'Evidence discovered on third floor.'),
+(15, 'Pooja Mehta', 'Kitchen Appliances, Cookware', 'Kitchen appliances and cookware in the kitchen.'),
+(16, 'Rohit Varma', 'Luggage, Passport', 'Luggage with passport in the closet.'),
+(17, 'Manisha Kapoor', 'Laptop, Books', 'Laptop and books in the study.'),
+(18, 'Sanjay Sharma', 'Sports Equipment Duffle Bag', 'Sports equipment and duffle bag in the garage.'),
+(19, 'Aman', 'shattered glass bottle', 'Evidence found on the eighth floor.'),
+(20, 'Kavita Patel', 'Jewelry Box, Perfume', 'Jewelry box and perfume in the bedroom.'),
+(21, 'Amit Kumar', 'Art Supplies, Canvas', 'Art supplies and canvas in the art studio.'),
+(22, 'Sunita Yadav', 'Tablet, Plants', 'Tablet and potted plants on the balcony.');
+
+CREATE TABLE interrogations (
+    occupation VARCHAR(255),
+    knownBy VARCHAR(255),
+    name VARCHAR(255) PRIMARY KEY,
+    statement VARCHAR(255),
+    company VARCHAR(255)
+);
+
+INSERT INTO Interrogations (occupation, knownBy, name, statement, company) VALUES
+('Job', 'Office', 'Dr. Rajesh Verma','One day i saw aman rushing in hurry and this note fell from his bag that says Wellness@30', 'B-Pharma'),
+('Lawyer', 'Client', 'Amit Patel', 'Statement provided by a client, Amit Patel, a criminal defense attorney.', 'Patel & Associates'),
+('watchman', 'Office', 'ramu kaka', 'saw people going at amans place in the morning', 'society'),
+('Job', 'Office', 'Sakshi Malik', 'Sakshi Malik, a project manager, shares her insights as the boss.', 'TechPro Solutions'),
+('Journalist', 'Source', 'Sandeep Sharma', 'Sandeep Sharma, an investigative journalist, shares his insights.', 'News Times'),
+('Teacher', 'Parent', 'Ayesha Khan', 'A parent, Ayesha Khan, gives her statement as a high school biology teacher.', 'Maplewood High School'),
+('Architect', 'Client', 'Rajesh Malhotra', 'Rajesh Malhotra, a residential architect, provides his statement.', 'Malhotra Design Studios'),
+('Fashion Designer', 'Model', 'Anjali Reddy', 'Anjali Reddy, a fashion designer and model, provides her witness statement.', 'Reddy Fashion House'),
+('Tea seller', 'chaiwala', 'raju', 'saw aman been dragged around 4:30-5 am into van', 'self-owned'),
+('Artist', 'Gallery Owner', 'Shweta Das', 'Gallery owner, Shweta Das, provides her statement about the contemporary painter.', 'Creative Canvas Gallery'),
+('Film Director', 'Actor', 'Raj Kapoor', 'Actor Raj Kapoor provides his insights as an acclaimed film director.', 'Bollywood Studios'),
+('Psychologist', 'Patient', 'Sneha Yadav', 'Witness statement from Sneha Yadav, a licensed psychologist.', 'Yadav Therapy Center'),
+('Dentist', 'Patient', 'Vikas Naidu', 'Statement provided by Vikas Naidu, a dental practitioner.', 'Naidu Dental Clinic'),
+('Job','Office', 'Alok Sharma', 'Alok Sharma, a senior engineer, provides his insights as the boss.', 'Tech Solutions Ltd.'),
+('Chef', 'Diner', 'Pooja Mehta', 'Pooja Mehta, a renowned chef, shares her insights as a diner.', 'Spice Delight Restaurant'),
+('Tour Guide', 'Tourist', 'Rohit Varma', 'Witness statement from Rohit Varma, a local tour guide.', 'Varma Tours & Travels'),
+('Pilot', 'Passenger', 'Manisha Kapoor', 'Statement given by Manisha Kapoor, a commercial airline pilot.', 'Air India'),
+('Software Developer', 'Office', 'Sanjay Sharma', 'Aman stayed up late night these days in office', 'B-Pharma'),
+('Interior Designer', 'Client', 'Kavita Patel', 'Statement provided by Kavita Patel, an interior decorator.', 'Patel Interiors'),
+('Job', 'Office', 'Neha Gupta', 'Neha Gupta, a senior banker, shares her insights as the boss.', 'Global Bank'),
+('Police Officer', 'Witness', 'Amit Kumar', 'Amit Kumar, a detective, provides his witness statement.', 'City Police Department'),
+('Chef', 'Restaurant Owner', 'Sunita Yadav', 'Sunita Yadav, an executive chef, shares her insights as a restaurant owner.', 'Yadav Fine Dining'),
+('Job', 'Office', 'Rajesh Reddy', 'Rajesh Reddy, a certified accountant, provides his insights as the boss.', 'Khanna Financial Services');
+
+CREATE TABLE footages (
+    date DATE,
+    time TIME,
+    footage_description VARCHAR(255)
+);
+INSERT INTO footages (date, time, footage_description) VALUES
+('2023-10-19', '09:00', 'Camera records a family having breakfast at the dining table.'),
+('2023-10-19', '12:30', 'Footage of a business meeting at the conference table in the office.'),
+('2023-10-19', '15:15', 'A couple playing a board game at the coffee table in the living room.'),
+('2023-10-19', '18:45', 'A group of friends enjoying dinner around the dining table.'),
+('2023-10-19', '20:00', 'Security footage of an empty meeting room with a conference table.'),
+('2023-10-19', '21:30', 'Camera captures a person working on a laptop at the study desk.'),
+('2023-10-19', '10:10', 'Children doing homework at the study table.'),
+('2023-10-19', '14:20', 'Group therapy session around the therapy room table.'),
+('2023-10-19', '16:45', 'Maintenance personnel inspecting the conference room table.'),
+('2023-10-19', '19:30', 'Video conference meeting with team members at the virtual round table.'),
+('2023-10-19', '11:15', ' An art class in progress at the art studio table.'),
+('2023-10-19', '13:40', 'Elderly residents playing cards at the retirement home''s game table.'),
+('2023-10-19', '17:55', 'Group yoga session taking place at the yoga studio floor mat.'),
+('2023-10-19', '22:00', 'Night vision camera footage of a deserted office meeting room.'),
+('2023-10-19', '10:30', 'Police detectives examining evidence at the investigation room table.'),
+('2023-10-19', '12:00', 'Conference room video conference with clients at the round table.'),
+('2023-10-19', '04:45', 'Aman dragged towards the van'),
+('2023-10-19', '05:00', 'Aman put in a van whose number is half seen as MH-14-EP-2'),
+('2023-10-19', '21:15', 'Night vision security footage of an empty cafeteria with tables.'),
+('2023-10-19', '11:20', 'Students studying together at the library study tables.'),
+('2023-10-19', '13:55', 'Baristas preparing coffee at the cafe''s bar counter.'),
+('2023-10-19', '16:30', 'Conference room setup for a team training session at the long table.'),
+('2023-10-19', '19:20', 'Inmates having meals in the prison''s dining hall.'),
+('2023-10-19', '10:40', 'Chess tournament in progress at the chess club table.'),
+('2023-10-19', '12:50', 'Office workers having lunch at the office breakroom table.'),
+('2023-10-19', '15:25', 'Board of directors meeting in the boardroom with a conference table.'),
+('2023-10-19', '18:00', 'Family gathering for dinner at the extended dining table.'),
+('2023-10-19', '21:50', 'Time-lapse footage of people coming and going at a cafe.'),
+('2023-10-19', '11:00', 'A group of friends playing board games at the gaming table.'),
+('2023-10-19', '14:00', 'Security camera footage of an empty lobby with tables.'),
+('2023-10-19', '17:40', 'Restaurant staff setting up tables for the evening service.');
+
+CREATE TABLE rto (
+    owner VARCHAR(255),
+    address VARCHAR(255),
+    registrationNumber VARCHAR(255) PRIMARY KEY
+);
+INSERT INTO rto (Owner, Address, RegistrationNumber) VALUES
+('Amit Kumar', '123 Main Street, Delhi', 'DL-14-XY-2020'),
+('Priya Singh', '456 Elm Road, Mumbai', 'MH-15-AB-2020'),
+('Rajesh Verma', '789 Oak Avenue, Bangalore', 'KA-98-CD-2020'),
+('Neha Gupta', '101 Pine Lane, Kolkata', 'WB-34-EF-2020'),
+('Rahul Sharma', '222 Maple Drive, Chennai', 'TN-65-GH-2020'),
+('Kavita Patel', '333 Cedar Court, Hyderabad', 'TS-43-XY-2020'),
+('Arun Singh', '444 Redwood Street, Pune', 'MH-87-AB-2020'),
+('Sneha Yadav', '555 Birch Road, Ahmedabad', 'GJ-78-CD-2020'),
+('Sudhir Agarwal', '666 Willow Avenue, Jaipur', 'RJ-21-EF-2020'),
+('Anjali Reddy', '777 Pine Lane, Chandigarh', 'CH-10-GH-2020'),
+('Pooja Mehta', '888 Oak Avenue, Lucknow', 'UP-56-XY-2020'),
+('Vikram Das', '999 Elm Road, Patna', 'BR-12-AB-2020'),
+('Shweta Tiwari', '111 Redwood Street, Bhopal', 'MP-78-CD-2020'),
+('Sanket', 'Sitaranagar pimple chowk pune', 'MH-14-EP-2020'),
+('Alok Singh', '131 Cedar Court, Kanpur', 'UP-54-AB-2020'),
+('Sarita Mishra', '141 Birch Road, Agra', 'UP-87-CD-2020'),
+('Rakesh Verma', '151 Willow Avenue, Varanasi', 'UP-34-EF-2020'),
+('Neha Gupta', '161 Oak Avenue, Nagpur', 'MH-45-GH-2020'),
+('Sanjay Sharma', '171 Elm Road, Surat', 'GJ-76-XY-2020'),
+('Anita Singh', '181 Cedar Court, Rajkot', 'GJ-87-AB-2020');
+
+
+CREATE TABLE folder (
+    processid INT PRIMARY KEY,
+    name VARCHAR(255),
+    timeOfAccess TIME,
+    dateOfAccess DATE
+);
+INSERT INTO folder (processid, name, timeOfAccess, dateOfAccess) VALUES
+(1, 'Documents', '09:30', '2023-10-19'),
+(2, 'Photos', '10:15', '2023-10-19'),
+(3, 'Music', '11:20', '2023-10-19'),
+(4, 'Videos', '12:45', '2023-10-19'),
+(5, 'Downloads', '13:25', '2023-10-19'),
+(6, 'Backup', '14:10', '2023-10-19'),
+(7, 'Projects', '15:30', '2023-10-19'),
+(8, 'Personal', '16:15', '2023-10-19'),
+(9, 'Important', '17:45', '2023-10-19'),
+(10, 'Work', '18:25', '2023-10-19'),
+(11, 'Family', '19:05', '2023-10-19'),
+(12, 'Travel', '20:20', '2023-10-19'),
+(13, 'Receipts', '21:10', '2023-10-19'),
+(14, 'Invoices', '22:30', '2023-10-19'),
+(15, 'Spreadsheets', '09:45', '2023-10-20'),
+(16, 'Presentations', '10:40', '2023-10-20'),
+(17, 'Photos', '11:55', '2023-10-20'),
+(18, 'Videos', '12:35', '2023-10-20'),
+(19, 'Downloads', '13:15', '2023-10-20'),
+(20, 'Personal', '14:25', '2023-10-20');
+
+CREATE TABLE files (
+    file_id INT PRIMARY KEY,
+    processid INT,
+    description VARCHAR(255),
+    name VARCHAR(255),
+    file_type VARCHAR(255),
+    FOREIGN KEY (processid) REFERENCES folder(processid)
+);
+INSERT INTO files (file_id, processid, description, name, file_type) VALUES
+(1, 1, 'Important document', 'document1.pdf', 'PDF'),
+(2, 1, 'Image of a sunset', 'sunset.jpg', 'JPEG'),
+(3, 2, 'Excel spreadsheet', 'data.xlsx', 'XLSX'),
+(4, 3, 'Video tutorial', 'tutorial.mp4', 'MP4'),
+(5, 3, 'Text document', 'readme.txt', 'TXT'),
+(6, 4, 'Presentation slides', 'presentation.pptx', 'PPTX'),
+(7, 4, 'Family photo', 'family.jpg', 'JPEG'),
+(8, 5, 'Software installer', 'software.exe', 'EXE'),
+(9, 5, 'Data backup', 'backup.zip', 'ZIP'),
+(10, 6, 'Meeting notes', 'notes.docx', 'DOCX'),
+(11, 7, 'Music playlist', 'playlist.m3u', 'M3U'),
+(12, 8, 'Project report', 'report.pdf', 'PDF'),
+(13, 8, 'Project plan', 'plan.docx', 'DOCX'),
+(14, 9, 'Tax statement', 'tax.pdf', 'PDF'),
+(15, 10, 'Image gallery', 'gallery.zip', 'ZIP'),
+(16, 11, 'Presentation slides', 'presentation.pptx', 'PPTX'),
+(17, 11, 'Photo album', 'album.pdf', 'PDF'),
+(18, 12, 'video shows the proof of illegal activities being conducted in some under construction building wuth the company name', 'clips.mp4', 'MP4'),
+(19, 12, 'Text document', 'notes.txt', 'TXT'),
+(20, 13, 'Software setup', 'setup.exe', 'EXE');
+
+
+CREATE TABLE Locations (
+    status VARCHAR(100),
+    city VARCHAR(20) PRIMARY KEY,
+    detailed_address VARCHAR(255)
+);
+
+
+INSERT INTO Locations (status, city, detailed_address) VALUES
+('PENDING', 'MUMBAI', '123, ABC Street, Mumbai, Maharashtra, India'),
+('COMPLETED', 'NASHIK', '456, XYZ Road, Nashik, Maharashtra, India'),
+('PENDING', 'NAGPUR', '789, PQR Lane, Nagpur, Maharashtra, India'),
+('PENDING', 'DELHI', '101, KLM Avenue, Delhi, India'),
+('PENDING', 'AHEMDABAD', '234, GHI Colony, Ahmedabad, Gujarat, India'),
+('PENDING', 'PCMC', '567, DEF Street, Pimpri-Chinchwad, Maharashtra, India'),
+('PENDING', 'INDORE', '890, MNO Road, Indore, Madhya Pradesh, India'),
+('PENDING', 'THANE', '111, RST Lane, Thane, Maharashtra, India'),
+('COMPLETED', 'PUMBAI', '222, UVW Street, Pune, Maharashtra, India'),
+('PENDING', 'PUNE', '345, JKL Road, Pune, Maharashtra, India'),
+('PENDING', 'VADODARA', '678, OPQ Lane, Vadodara, Gujarat, India'),
+('COMPLETED', 'VISHAKHAPATNAM', '123, ABC Street, Vishakhapatnam, Andhra Pradesh, India'),
+('PENDING', 'HYDERABAD', '456, XYZ Road, Hyderabad, Telangana, India'),
+('PENDING', 'BANGLORE', '789, PQR Lane, Bangalore, Karnataka, India'),
+('PENDING', 'HAMPI', '101, KLM Avenue, Hampi, Karnataka, India'),
+('PENDING', 'MYSORE', '234, GHI Colony, Mysore, Karnataka, India'),
+('COMPLETED', 'JALGAON', '567, DEF Street, Jalgaon, Maharashtra, India'),
+('PENDING', 'SURAT', '890, MNO Road, Surat, Gujarat, India'),
+('PENDING', 'KANPUR', '111, RST Lane, Kanpur, Uttar Pradesh, India'),
+('COMPLETED', 'LUCKNOW', '222, UVW Street, Lucknow, Uttar Pradesh, India'),
+('COMPLETED', 'PATNA', '345, JKL Road, Patna, Bihar, India'),
+('COMPLETED', 'BHOPAL', '678, OPQ Lane, Bhopal, Madhya Pradesh, India'),
+('COMPLETED', 'CHANDIGARH', '123, ABC Street, Chandigarh, India'),
+('COMPLETED', 'PATIALA', '456, XYZ Road, Patiala, Punjab, India');
+
+
+CREATE TABLE Projects (
+    location VARCHAR(255),
+    description VARCHAR(255),
+    name VARCHAR(255),
+    lead_by VARCHAR(255),
+    FOREIGN KEY (location) REFERENCES Locations(city)
+);
+
+INSERT INTO Projects (location, description, name, lead_by) VALUES
+('MUMBAI', 'Developing new drug formulation', 'Drug Formulation Research', 'Rajesh'),
+('NASHIK', 'Clinical trials of a new medicine', 'Medicine Clinical Trials', 'Neha'),
+('NAGPUR', 'Studying the effectiveness of vaccines', 'Vaccine Effectiveness Study', 'Amit'),
+('DELHI', 'Research on herbal supplements', 'Herbal Supplements Research', 'Sanjay'),
+('AHEMDABAD', 'Exploring nanotechnology in drug delivery', 'Nanotechnology Drug Delivery', 'Priya'),
+('PCMC', 'Development of new antibiotic compounds', 'Antibiotic Development Project', 'Anjali'),
+('INDORE', 'Biotechnological research on cancer treatments', 'Cancer Biotech Research', 'Siddharth'),
+('THANE', 'Investigating genetic therapies for rare diseases', 'Genetic Therapy Research', 'Ramesh'),
+('PUMBAI', 'Clinical trials for a new antiviral drug', 'Antiviral Drug Clinical Trials', 'Mohan'),
+('JALGAON', 'Developing personalized medicine techniques', 'Personalized Medicine Development', 'Aman'),
+('VADODARA', 'Studying the effects of lifestyle on health', 'Lifestyle and Health Study', 'Sandeep'),
+('VISHAKHAPATNAM', 'Research on cardiovascular health', 'Cardiovascular Health Research', 'Aman'),
+('HYDERABAD', 'Development of new medical imaging technology', 'Medical Imaging Technology', 'Rajesh'),
+('BANGLORE', 'Clinical trials for a new cancer treatment', 'Cancer Treatment Clinical Trials', 'Aman'),
+('HAMPI', 'Research on traditional medicine integration', 'Traditional Medicine Integration', 'Amit'),
+('MYSORE', 'Studying the microbiome for gut health', 'Microbiome and Gut Health Study', 'Sanjay'),
+('JALGAON', 'Development of new mental health treatments', 'Mental Health Treatment Development', 'Aman'),
+('SURAT', 'Investigating alternative therapies for pain management', 'Pain Management Research', 'Anjali'),
+('KANPUR', 'Clinical trials for a new diabetes treatment', 'Diabetes Treatment Clinical Trials', 'Siddharth'),
+('LUCKNOW', 'Research on neurological disorders', 'Neurological Disorder Research', 'Ramesh'),
+('PATNA', 'Development of novel drug delivery systems', 'Drug Delivery System Development', 'Mohan');
+
+
+CREATE TABLE FloorEvidence (
+    floor_id INT PRIMARY KEY,
+    evidence_id INT,
+    floor_no INT,
+    description VARCHAR(255),
+    FOREIGN KEY (evidence_id) REFERENCES evidence(ID)
+);
+INSERT INTO FloorEvidence (floor_id, evidence_id, floor_no, description) VALUES
+(1, 1, 1, 'broken iPad'),
+(2, 2, 2, 'fingerprints on a doorknob'),
+(3, 3, 3, 'broken vase'),
+(4, 4, 4, 'misplaced set of keys'),
+(5, 5, 5, 'bloodstained knife'),
+(6, 6, 6, 'torn page from a diary'),
+(7, 7, 7, 'broken necklace'),
+(8, 8, 8, 'discarded glove'),
+(9, 9, 9, 'torn business card'),
+(10, 10, 10, 'discarded wallet'),
+(11, 11, 11, 'bloody handprint'),
+(12, 12, 12, 'ripped map'),
+(13, 13, 13, 'damaged phone'),
+(14, 14, 14, 'torn piece of fabric'),
+(15, 15, 15, 'torn photograph'),
+(16, 16, 16, 'damaged laptop'),
+(17, 17, 17, 'shattered window'),
+(18, 18, 18, 'torn letter'),
+(19, 19, 19, 'shattered glass bottle'),
+(20, 20, 20, 'broken chair'),
+(21, 21, 21, 'damaged painting');
+
+CREATE TABLE partners (
+    partner_name VARCHAR(255) NOT NULL,
+    partnership_type VARCHAR(255) NOT NULL,
+    partnerSince DATE NOT NULL,
+    PRIMARY KEY (partner_name)
+);
+INSERT INTO partners (partner_name, partnership_type, partnerSince) VALUES
+('Amit Khanna', 'Joint Venture', '2020-01-15'),
+('Neha Gupta', 'Distribution', '2018-05-10'),
+('Alok Sharma', 'Franchise', '2019-09-20'),
+('Sakshi Malik', 'Collaboration', '2017-11-30'),
+('Rajesh Reddy', 'Manufacturing', '2021-03-05');
